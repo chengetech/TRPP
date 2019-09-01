@@ -1,42 +1,45 @@
 <template>
+<!--#66BA54-->
   <el-container>
-    <el-header>
-      <!-- 导航区 -->
-      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" 
-        style="display: inline-block; float: left; border-bottom: 0;"> 
-
-        <el-menu-item index="1" class="title">SOLUTIONS</el-menu-item>
-        <el-submenu index="2">
-          <template slot="title">INDUSTRIES</template>
-          <el-menu-item index="2-1">AAAAAA</el-menu-item>
-          <el-menu-item index="2-2">BBBBBB</el-menu-item>
-          <el-menu-item index="2-3">CCCCCC</el-menu-item>
-          <el-submenu index="2-4">
-            <template slot="title">DDDDDD</template>
-            <el-menu-item index="2-4-1">EEEEEE</el-menu-item>
-            <el-menu-item index="2-4-2">FFFFFF</el-menu-item>
-            <el-menu-item index="2-4-3">GGGGGG</el-menu-item>
-          </el-submenu>
-        </el-submenu>
-        <el-menu-item index="3">COMPANY</el-menu-item>
-        <el-menu-item index="4">OPPORTUNITIES</el-menu-item>
-      </el-menu>
-      <!-- LOGO区 -->
-      <div style="display: inline-block;">
-        <img class="logo" src="@/assets/image/logo.png">
-        <div class="center-title">THE RIGHT PROMOTIONAL PRODUCTS</div>
-      </div>
-      <!-- 社交区 -->
-      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" 
-        style="display: inline-block; float: right; border-bottom: 0;"> 
-
-        <el-menu-item index="5"><span style="font-size: 40px;" class="iconfont iconweixin"></span></el-menu-item>
-        <el-menu-item index="6"><span style="font-size: 40px;" class="iconfont iconqq"></span></el-menu-item>
-        <el-menu-item index="7"><span style="font-size: 40px;" class="iconfont iconweibo"></span></el-menu-item>
-        <el-menu-item index="8"><span style="font-size: 40px;" class="iconfont iconfacebook"></span></el-menu-item>
-        <el-menu-item index="9"><span style="font-size: 40px;" class="iconfont iconicon"></span></el-menu-item>
-      </el-menu>
-      
+    <el-header style="height: 120px;">
+      <!-- flex 布局 -->
+      <el-row type="flex" class="row-bg" justify="space-between">
+        <!-- LOGO区 -->
+        <el-col :span="6">
+            <img class="logo" src="@/assets/image/logo.png">
+            <span class="logo-name">PROMO & PRODU</span>
+        </el-col>
+        <!-- 导航区 -->
+        <el-col :span="12">
+          <el-menu mode="horizontal" @select="handleSelect" 
+            active-text-color="#66BA54"> 
+            <el-menu-item index="1" class="title">SOLUTIONS</el-menu-item>
+            <el-submenu index="2">
+              <template slot="title">INDUSTRIES</template>
+              <el-menu-item index="2-1">AAAAAA</el-menu-item>
+              <el-menu-item index="2-2">BBBBBB</el-menu-item>
+              <el-menu-item index="2-3">CCCCCC</el-menu-item>
+              <el-submenu index="2-4">
+                <template slot="title">DDDDDD</template>
+                <el-menu-item index="2-4-1">EEEEEE</el-menu-item>
+                <el-menu-item index="2-4-2">FFFFFF</el-menu-item>
+                <el-menu-item index="2-4-3">GGGGGG</el-menu-item>
+              </el-submenu>
+            </el-submenu>
+            <el-menu-item index="3">COMPANY</el-menu-item>
+            <el-menu-item index="4">OPPORTUNITIES</el-menu-item>
+          </el-menu>
+        </el-col>
+        <!-- 社交区 -->
+        <el-col :span="4">
+          <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" 
+            style="display: inline-block; float: right; border-bottom: 0;" active-text-color="#66BA54"> 
+            <el-menu-item index="5"><span style="font-size: 40px;" class="iconfont iconweixin"></span></el-menu-item>
+            <el-menu-item index="8"><span style="font-size: 40px;" class="iconfont iconfacebook"></span></el-menu-item>
+            <el-menu-item index="9"><span style="font-size: 40px;" class="iconfont iconicon"></span></el-menu-item>
+          </el-menu>
+        </el-col>
+      </el-row>  
     </el-header>
     <el-main style="overflow: hidden;">
       <!-- 走马灯-产品图片 -->
@@ -106,12 +109,8 @@
           <img src="@/assets/image/tee__.png" style="width: 160px;    margin-right: 30px;" alt="Tee++">
         </a>
       </div>
-  
-
-
-
     </el-main>
-    <el-footer> © 2016 TRPP L.P. ALL RIGHTS RESERVED</el-footer>
+    <el-footer> © 2019 TRPP L.P. ALL RIGHTS RESERVED</el-footer>
   </el-container>
 </template>
 
@@ -137,7 +136,7 @@ export default {
 <style>
   .el-header, .el-footer {
     text-align: center;
-    line-height: 80px;
+    line-height: 120px;
   }
   
   .el-main {
@@ -147,6 +146,60 @@ export default {
   
   body > .el-container {
     margin-bottom: 40px;
+  }
+
+  .el-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .el-col {
+    border-radius: 4px;
+  }
+  
+  /* .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  } */
+
+  .logo {
+    width: 100px; 
+    height: 100px;
+    vertical-align: middle;
+  }
+
+  .logo-name {
+    line-height: 100px; 
+    font: 28px arial,sans-serif; 
+    color: #66BA54; 
+    vertical-align: middle;
+  }
+
+  .el-menu {
+    display: inline-block; 
+    height: 100%; 
+    border-bottom: 0;
+  }
+
+  .el-menu--horizontal>.el-menu-item {
+    height: 120px;
+    line-height: 120px;
+    font-size: 24px;
+  }
+
+  .el-menu-item:hover {
+    color: #66BA54 !important;
+  }
+
+  .el-menu--horizontal>.el-submenu .el-submenu__title  {
+    height: 120px;
+    line-height: 120px;
+    font-size: 24px;
+  }
+
+  .el-submenu__title:hover {
+    color: #66BA54 !important;
   }
 
   .el-carousel__container {
@@ -174,16 +227,9 @@ export default {
     bottom: -45%; */
   }
 
-  .iconfont {
-    font-size: 40px;
-  }
-  .logo {
-    width:60px; 
-    height: 60px;
-  }
   .center-title {
     display: inline-block; 
-    line-height: 60px; 
+    line-height: 120px; 
     vertical-align: top; 
     margin-left: 10px;
   }
