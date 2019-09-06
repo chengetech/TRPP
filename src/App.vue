@@ -3,7 +3,7 @@
   <el-container>
     <el-header style="height: 120px;">
       <!-- flex 布局 -->
-      <el-row type="flex" class="row-bg" justify="space-between">
+      <el-row type="flex" class="row-bg" justify="space-between" style="height: 120px;">
         <!-- LOGO区 -->
         <el-col :span="6">
             <img class="logo" src="@/assets/image/logo.png">
@@ -12,7 +12,7 @@
         <!-- 导航区 -->
         <el-col :span="12">
           <el-menu mode="horizontal" @select="handleSelect" 
-            active-text-color="#66BA54"> 
+            active-text-color="#66BA54" style="border: 0;"> 
             <el-menu-item index="1" class="title">SOLUTIONS</el-menu-item>
             <el-submenu index="2">
               <template slot="title">INDUSTRIES</template>
@@ -33,15 +33,16 @@
         <!-- 社交区 -->
         <el-col :span="4">
           <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" 
-            style="display: inline-block; float: right; border-bottom: 0;" active-text-color="#66BA54"> 
+            style="display: inline-block; float: right; border-bottom: 0; right: 100px;" active-text-color="#66BA54"> 
             <el-menu-item index="5"><span style="font-size: 40px;" class="iconfont iconweixin"></span></el-menu-item>
+            <el-menu-item index="9"><span style="font-size: 40px;" class="iconfont iconqq"></span></el-menu-item>
             <el-menu-item index="8"><span style="font-size: 40px;" class="iconfont iconfacebook"></span></el-menu-item>
             <el-menu-item index="9"><span style="font-size: 40px;" class="iconfont iconicon"></span></el-menu-item>
           </el-menu>
         </el-col>
       </el-row>  
     </el-header>
-    <el-main style="overflow: hidden;">
+    <el-main>
       <!-- 走马灯-产品图片 -->
       <el-carousel :interval="3000" :autoplay="true">
         <el-carousel-item><img src="@/assets/image/img-1.jpg"></el-carousel-item>
@@ -134,14 +135,28 @@ export default {
 </script>
 
 <style>
-  .el-header, .el-footer {
-    text-align: center;
+  .el-header {
+    position: fixed;
+    width: 100%;
+    height: 120px;
     line-height: 120px;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    text-align: center;
   }
   
   .el-main {
+    top: 120px;
     text-align: center;
     line-height: 800px;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .el-footer {
+    text-align: center;
+    line-height: 120px;
   }
   
   body > .el-container {
@@ -149,10 +164,7 @@ export default {
   }
 
   .el-row {
-    margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
   .el-col {
     border-radius: 4px;
