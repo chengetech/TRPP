@@ -71,14 +71,81 @@
         </p>
       </div>
       <el-row>
-        <el-col :span="3" v-for="(o, index) in 12" :key="o" offset="1">
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="@/assets/image/ser-1.jpg" class="image">
+            <div class="image-font"><span>FOOD HANBGER</span></div>
+          </el-card>
+        </el-col>
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="@/assets/image/ser-7.jpg" class="image">
+            <div class="image-font"><span>FOOD HANBGER</span></div>
+          </el-card>
+        </el-col>
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="@/assets/image/ser-2.jpg" class="image">
+            <div class="image-font"><span>FOOD HANBGER</span></div>
+          </el-card>
+        </el-col>
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="@/assets/image/ser-3.jpg" class="image">
+            <div class="image-font"><span>FOOD HANBGER</span></div>
+          </el-card>
+        </el-col>
+        <el-col :span="3" offset="1">
           <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
             <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
             <div style="padding: 14px; height: 20px; line-height: 20px;">
               <span>FOOD HANBGER</span>
             </div>
-            <div class="over-lay">
-              <p><span>As your print solutions partner, we'll lend our expertise in design and paper options while also recommending production and distribution methods to ensure you leave lasting impressions.</span></p> </div>
+          </el-card>
+        </el-col>
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="@/assets/image/ser-4.jpg" class="image">
+            <div class="image-font"><span>FOOD HANBGER</span></div>
+          </el-card>
+        </el-col>
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="@/assets/image/ser-5.jpg" class="image">
+            <div class="image-font"><span>FOOD HANBGER</span></div>
+          </el-card>
+        </el-col>
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="@/assets/image/ser-6.jpg" class="image">
+            <div class="image-font"><span>FOOD HANBGER</span></div>
+          </el-card>
+        </el-col>
+
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="@/assets/image/ser-7.jpg" class="image">
+            <div class="image-font"><span>FOOD HANBGER</span></div>
+          </el-card>
+        </el-col>
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="@/assets/image/ser-8.jpg" class="image">
+            <div class="image-font"><span>FOOD HANBGER</span></div>
+          </el-card>
+        </el-col>
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="@/assets/image/ser-9.jpg" class="image">
+            <div class="image-font"><span>FOOD HANBGER</span></div>
+          </el-card>
+        </el-col>
+        <el-col :span="3" offset="1">
+          <el-card :body-style="{ padding: '0px'}" style="margin-bottom: 40px;">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
+            <div style="padding: 14px; height: 20px; line-height: 20px;">
+              <span>FOOD HANBGER</span>
+            </div>
           </el-card>
         </el-col>
       </el-row>
@@ -247,8 +314,19 @@ export default {
   }
 
   .image {
-    width: 100%;
+    width: 314px;
+    height: 300px;
     display: block;
+  }
+
+  .image-font {
+    padding: 14px; 
+    height: 20px; 
+    line-height: 20px;
+  }
+
+  .el-col-offset-1 {
+    margin-left: 3.56667%;
   }
 
   .over-lay {
