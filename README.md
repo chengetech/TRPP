@@ -1,4 +1,6 @@
-# goodlife
+# TRPP
+
+## The right promotional products company
 
 ## Project setup
 ```
