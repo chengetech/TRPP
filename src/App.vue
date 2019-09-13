@@ -7,7 +7,7 @@
         <!-- LOGO区 -->
         <el-col :span="6">
             <img class="logo" src="@/assets/image/logo.png">
-            <span class="logo-name">PROMO & PRODU</span>
+            <span class="logo-name">TRPP</span>
         </el-col>
         <!-- 导航区 -->
         <el-col :span="12">
